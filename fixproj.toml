@@ -79,3 +79,20 @@ output = "myprogram.out"
 # name = "your-project"
 # version = "1.2.0"
 # git = { url = "https://github.com/tttmmmyyyy/your-project.git" }
+
+
+[[dependencies]]
+name = "minilib-common"
+version = "*"
+git = { url = "https://github.com/pt9999/fixlang-minilib-common.git" }
+
+
+[[dependencies]]
+name = "minilib-text"
+version = "*"
+git = { url = "https://github.com/pt9999/fixlang-minilib-text.git" }
+
+[[dependencies]]
+name = "minilib-binary"
+version = "*"
+git = { url = "https://github.com/pt9999/fixlang-minilib-binary.git" }

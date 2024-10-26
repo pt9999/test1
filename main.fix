@@ -1,4 +1,20 @@
 module Main;
-main: IO ();
-main = pure();
 
+import Character;
+
+import Minilib.Text.SimpleParser;
+import Minilib.Text.Hex;
+import Minilib.Text.StringEx;
+
+parse_alpha: Parser String;
+parse_alpha = (
+    repeat(match_any_char.filter(Character::is_alpha)).map(_unsafe_to_string)
+);
+
+main: IO ();
+main = (
+    let res = parse_alpha.run_parser_str("abc def");
+    eval *println("res=" + res.to_string);
+    let a = "Hello world".get_bytes.pop_back;
+    println(a.to_string_hex)
+);
